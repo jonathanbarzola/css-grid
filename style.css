@@ -13,11 +13,13 @@ body {
 }
 
 .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
     border: 1px solid black;
     border-radius: 10px;
     background-color: #00aeff;
-    text-align: center;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -26,4 +28,47 @@ body {
     transform: scale(1.03);
 }
 
+
+/* CSS GRID - Guía Completa */
+
+.grid-container {
+    /* 
+    Convierte el div en grid container y sus elementos en grid items.
+    Por defecto tiene el 100% del ancho
+    inline-grid: ancho del contenido.
+    */
+
+    min-height: 600px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    /* grid-template-rows: 150px 200px; */
+
+    grid-auto-rows: 150px;
+    /* grid-auto-flow: column;
+    grid-auto-columns: 200px; */
+
+    /* row-gap: 10px;
+    column-gap: 15px; */
+
+    /* gap: row-gap column-gap */
+    gap: 10px;
+    padding: 10px;
+
+
+    /* 
+    align-items: stretch; --> alinea en las filas
+    justify-items: center; --> alinea en las columnas 
+    */ 
+    /* place-items: align-items justify-items */
+    /* place-items: center; */
+
+
+
+    /* align-content: stretch; 
+    justify-content: start; */
+
+    /* place-content: align-content justify-content; */
+    place-content: center; 
+}
 
